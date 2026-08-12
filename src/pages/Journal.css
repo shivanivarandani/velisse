@@ -1,7 +1,0 @@
-.journal-list {
-  padding-bottom: var(--section-pad);
-}
-
-.journal-list > .reveal:last-child .journal-card {
-  border-bottom: 1px solid var(--c-gold-hair);
-}
