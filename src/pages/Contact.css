@@ -1,0 +1,112 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 5rem;
+  padding-block: var(--section-pad);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+}
+
+.contact-info-block .eyebrow {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.contact-info-block p {
+  line-height: 1.8;
+  color: var(--c-ivory-dim);
+}
+
+.contact-info-block a {
+  color: var(--c-ivory-dim);
+  transition: color var(--dur-med) var(--ease-editorial);
+}
+
+.contact-info-block a:hover {
+  color: var(--c-gold);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  max-width: 560px;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-field label {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-ivory-faint);
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--c-gold-hair);
+  padding-block: 0.7rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--c-ivory);
+  transition: border-color var(--dur-med) var(--ease-editorial);
+  resize: none;
+}
+
+.contact-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.contact-field select option {
+  background: var(--c-midnight);
+  color: var(--c-ivory);
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: var(--c-gold);
+}
+
+.contact-submit {
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+.contact-success {
+  max-width: 480px;
+  padding-top: 0.4rem;
+}
+
+.contact-success .eyebrow {
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.contact-success p {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: var(--c-ivory);
+}
+
+@media (max-width: 860px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

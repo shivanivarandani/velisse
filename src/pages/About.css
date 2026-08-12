@@ -1,0 +1,90 @@
+.about-intro {
+  padding-block: var(--section-pad);
+}
+
+.about-intro-text p {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.6;
+  max-width: 900px;
+  color: var(--c-ivory);
+}
+
+.about-principles {
+  padding-bottom: var(--section-pad);
+}
+
+.about-principles > .eyebrow {
+  display: block;
+  margin-bottom: 2.5rem;
+}
+
+.about-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.about-principle-motif {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 1.6rem;
+}
+
+.about-principle h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.8rem;
+}
+
+.about-principle p {
+  color: var(--c-ivory-dim);
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+.about-atelier {
+  padding-block: var(--section-pad);
+  text-align: center;
+  border-top: 1px solid var(--c-gold-hair);
+}
+
+.about-rule {
+  max-width: 80px;
+  margin-inline: auto;
+  margin-bottom: 2.4rem;
+  background: var(--c-gold);
+  opacity: 0.6;
+}
+
+.about-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.5rem, 3.4vw, 2.3rem);
+  max-width: 760px;
+  margin-inline: auto;
+  line-height: 1.5;
+  color: var(--c-ivory);
+}
+
+.about-quote-attr {
+  display: block;
+  margin-top: 1.6rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+}
+
+@media (max-width: 1080px) {
+  .about-principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .about-principles-grid {
+    grid-template-columns: 1fr;
+  }
+}

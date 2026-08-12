@@ -1,0 +1,24 @@
+.page-header {
+  padding-top: clamp(9rem, 16vw, 12rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--c-gold-hair);
+}
+
+.page-header .eyebrow {
+  display: block;
+  margin-bottom: 1.4rem;
+}
+
+.page-header-title {
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  font-weight: 300;
+  max-width: 900px;
+}
+
+.page-header-desc {
+  margin-top: 1.4rem;
+  max-width: 560px;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--c-ivory-dim);
+}

@@ -1,0 +1,41 @@
+.journal-post-header {
+  padding-top: clamp(8rem, 14vw, 11rem);
+  padding-bottom: 3rem;
+  max-width: 780px;
+}
+
+.journal-post-meta {
+  display: block;
+  margin-top: 1.2rem;
+  font-size: 0.8rem;
+  color: var(--c-ivory-faint);
+  letter-spacing: 0.04em;
+}
+
+.journal-post-title {
+  margin-top: 1rem;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 300;
+  line-height: 1.15;
+}
+
+.journal-post-motif {
+  width: min(200px, 30vw);
+  margin-inline: auto;
+  padding-block: 2rem;
+  color: var(--c-gold);
+}
+
+.journal-post-body {
+  max-width: 680px;
+  padding-bottom: var(--section-pad);
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.journal-post-body p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--c-ivory-dim);
+}
