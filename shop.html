@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shop the full VÉLISSE collection — rings, necklaces, earrings, and bracelets designed with architectural rigor." />
+  <meta name="theme-color" content="#0a0e1a" />
+  <title>Shop — VÉLISSE</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner container">
+      <a href="index.html" class="navbar-mark" aria-label="VÉLISSE — home">VÉLISSE</a>
+      <nav class="navbar-links" aria-label="Primary">
+        <a href="shop.html" class="navbar-link is-active">Shop</a>
+        <a href="collections.html" class="navbar-link">Collections</a>
+        <a href="about.html" class="navbar-link">About</a>
+        <a href="journal.html" class="navbar-link">Journal</a>
+        <a href="contact.html" class="navbar-link">Contact</a>
+      </nav>
+      <button class="navbar-toggle" id="navToggle" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar-overlay">
+      <nav class="navbar-overlay-links" aria-label="Mobile">
+        <a href="shop.html" class="navbar-overlay-link is-active" style="transition-delay:80ms">Shop</a>
+        <a href="collections.html" class="navbar-overlay-link" style="transition-delay:140ms">Collections</a>
+        <a href="about.html" class="navbar-overlay-link" style="transition-delay:200ms">About</a>
+        <a href="journal.html" class="navbar-overlay-link" style="transition-delay:260ms">Journal</a>
+        <a href="contact.html" class="navbar-overlay-link" style="transition-delay:320ms">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <header class="page-header container">
+      <div class="reveal">
+        <span class="eyebrow">The Full Collection</span>
+        <h1 class="page-header-title">Shop</h1>
+        <p class="page-header-desc">Every current piece, presented on its own — no distraction, no filler. Select a category to narrow the view.</p>
+      </div>
+    </header>
+
+    <div class="container shop-filters" id="shopFilters">
+      <button class="shop-filter is-active" data-category="all">all</button>
+      <button class="shop-filter" data-category="rings">rings</button>
+      <button class="shop-filter" data-category="necklaces">necklaces</button>
+      <button class="shop-filter" data-category="earrings">earrings</button>
+      <button class="shop-filter" data-category="bracelets">bracelets</button>
+    </div>
+
+    <div class="container shop-grid" id="shopGrid"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <span class="footer-mark">VÉLISSE</span>
+        <p class="footer-line">Where architecture meets emotion, and form becomes feeling.</p>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <span class="eyebrow">Navigate</span>
+          <a href="shop.html">Shop</a>
+          <a href="collections.html">Collections</a>
+          <a href="about.html">About</a>
+          <a href="journal.html">Journal</a>
+        </div>
+        <div class="footer-col">
+          <span class="eyebrow">Client Care</span>
+          <a href="contact.html">Contact</a>
+          <a href="#atelier">The Atelier</a>
+          <a href="#care">Jewelry Care</a>
+          <a href="#shipping">Shipping &amp; Returns</a>
+        </div>
+        <div class="footer-col">
+          <span class="eyebrow">Follow</span>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://pinterest.com" target="_blank" rel="noreferrer">Pinterest</a>
+        </div>
+      </div>
+    </div>
+    <div class="hairline container"></div>
+    <div class="container footer-bottom">
+      <span>&copy; <span class="js-year"></span> VÉLISSE. All rights reserved.</span>
+      <span>Designed as an object, not a template.</span>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/motifs.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const shopGrid = document.getElementById('shopGrid')
+
+    function renderShopGrid(category) {
+      const items = category === 'all' ? VELISSE_PRODUCTS : VELISSE_PRODUCTS.filter((p) => p.category === category)
+      shopGrid.innerHTML = items.map((p, i) => velisseRevealWrap(velisseProductCardHTML(p), (i % 3) + 1)).join('')
+      velisseInitReveal()
+    }
+
+    renderShopGrid('all')
+
+    document.getElementById('shopFilters').addEventListener('click', (e) => {
+      const btn = e.target.closest('.shop-filter')
+      if (!btn) return
+      document.querySelectorAll('.shop-filter').forEach((b) => b.classList.remove('is-active'))
+      btn.classList.add('is-active')
+      renderShopGrid(btn.dataset.category)
+    })
+  </script>
+</body>
+</html>

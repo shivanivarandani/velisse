@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VÉLISSE — an elevated jewelry house inspired by architecture, sculpture, and artistic movements. Where architecture meets emotion, and form becomes feeling." />
+  <meta name="theme-color" content="#0a0e1a" />
+  <title>VÉLISSE — Jewelry as Architecture</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner container">
+      <a href="index.html" class="navbar-mark" aria-label="VÉLISSE — home">VÉLISSE</a>
+      <nav class="navbar-links" aria-label="Primary">
+        <a href="shop.html" class="navbar-link">Shop</a>
+        <a href="collections.html" class="navbar-link">Collections</a>
+        <a href="about.html" class="navbar-link">About</a>
+        <a href="journal.html" class="navbar-link">Journal</a>
+        <a href="contact.html" class="navbar-link">Contact</a>
+      </nav>
+      <button class="navbar-toggle" id="navToggle" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar-overlay">
+      <nav class="navbar-overlay-links" aria-label="Mobile">
+        <a href="shop.html" class="navbar-overlay-link" style="transition-delay:80ms">Shop</a>
+        <a href="collections.html" class="navbar-overlay-link" style="transition-delay:140ms">Collections</a>
+        <a href="about.html" class="navbar-overlay-link" style="transition-delay:200ms">About</a>
+        <a href="journal.html" class="navbar-overlay-link" style="transition-delay:260ms">Journal</a>
+        <a href="contact.html" class="navbar-overlay-link" style="transition-delay:320ms">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid container">
+        <div class="hero-copy">
+          <span class="eyebrow hero-eyebrow">Est. as an idea, cast as an object</span>
+          <h1 class="hero-title">Jewelry, <em>drafted</em><br />like architecture.</h1>
+          <p class="hero-sub">VÉLISSE is a jewelry house for those who read a room before they read a ring — objects of balance, mass, and quiet consequence.</p>
+          <a href="shop.html" class="cta-link hero-cta">Enter the Atelier <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="hero-visual" data-parallax="0.08">
+          <!-- motif injected by js -->
+        </div>
+      </div>
+      <div class="hero-foot container">
+        <span class="hero-index">01 — Cantilever Collection</span>
+        <span class="hero-scroll"><span class="hero-scroll-line"></span>Scroll</span>
+      </div>
+    </section>
+
+    <section class="featured container">
+      <div class="featured-head">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Selected Works</span>
+          <h2 class="section-heading-title">The Featured Collection</h2>
+          <p class="section-heading-desc">A rotating edit of the pieces currently defining the house — chosen for how they hold light, weight, and space.</p>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <a href="shop.html" class="cta-link">View All Pieces <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+      <div class="featured-grid" id="featuredGrid"></div>
+    </section>
+
+    <section class="ad-panels" id="adPanels"></section>
+
+    <section class="brand-story">
+      <div class="brand-story-glow" aria-hidden="true"></div>
+      <div class="container brand-story-inner">
+        <div class="hairline brand-story-rule reveal"></div>
+        <div class="reveal reveal-delay-1">
+          <p class="brand-story-quote">Where <em>architecture</em> meets emotion,<br />and form becomes <em>feeling</em>.</p>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <p class="brand-story-body">VÉLISSE was founded on a single conviction: that a piece of jewelry can be engineered with the same rigor as a building, and felt with the same intimacy as a private gesture. Every collection begins not with a stone, but with a structural idea — cantilever, mass, negative space, balance — drawn from the architects, sculptors, and artists we return to again and again.</p>
+        </div>
+        <div class="hairline brand-story-rule reveal reveal-delay-3"></div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-section-inner">
+        <div class="reveal"><span class="eyebrow">By Appointment</span></div>
+        <div class="reveal reveal-delay-1"><h2 class="cta-section-title">Private viewings, <em>held quietly</em>.</h2></div>
+        <div class="reveal reveal-delay-2 cta-section-actions">
+          <a href="contact.html" class="cta-link">Request an Appointment <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <span class="footer-mark">VÉLISSE</span>
+        <p class="footer-line">Where architecture meets emotion, and form becomes feeling.</p>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <span class="eyebrow">Navigate</span>
+          <a href="shop.html">Shop</a>
+          <a href="collections.html">Collections</a>
+          <a href="about.html">About</a>
+          <a href="journal.html">Journal</a>
+        </div>
+        <div class="footer-col">
+          <span class="eyebrow">Client Care</span>
+          <a href="contact.html">Contact</a>
+          <a href="#atelier">The Atelier</a>
+          <a href="#care">Jewelry Care</a>
+          <a href="#shipping">Shipping &amp; Returns</a>
+        </div>
+        <div class="footer-col">
+          <span class="eyebrow">Follow</span>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://pinterest.com" target="_blank" rel="noreferrer">Pinterest</a>
+        </div>
+      </div>
+    </div>
+    <div class="hairline container"></div>
+    <div class="container footer-bottom">
+      <span>&copy; <span class="js-year"></span> VÉLISSE. All rights reserved.</span>
+      <span>Designed as an object, not a template.</span>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/motifs.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelector('.hero-visual').innerHTML = velisseMotifMarkup('column', 'Featured piece — the Meridian line') + '<span class="hero-visual-ring"></span>'
+
+    const featured = VELISSE_PRODUCTS.filter((p) => p.featured)
+    document.getElementById('featuredGrid').innerHTML = featured
+      .map((p, i) => velisseRevealWrap(velisseProductCardHTML(p), (i % 3) + 1, 'featured-item'))
+      .join('')
+
+    velisseRenderAdPanels('adPanels')
+
+    velisseInitReveal()
+    velisseInitParallax()
+  </script>
+</body>
+</html>
